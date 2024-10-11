@@ -122,6 +122,7 @@ export function AllServices() {
           >
             <img 
               src='/img/devices.gif'
+              loading="lazy"
               alt={imgAlt}
               className="h-full w-full"
             />

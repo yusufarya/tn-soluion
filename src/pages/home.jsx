@@ -85,6 +85,7 @@ export function Home() {
             <div className="mb-30 md:mb-5 lg:mb-0">
               <div className="float-right w-full md:w-4/5 lg:w-4/5">
                 <img
+                  loading="lazy"
                   src="/img/hero_ilustrator.png "
                   className="h-full w-full animate-floating drop-shadow-lg shadow-slate-50"
                 />
@@ -173,6 +174,7 @@ export function Home() {
                 >
                 <img
                   alt="Card Image"
+                  loading="lazy"
                   src="/img/chat_bot.gif"
                   className="h-full w-10/12"
                   
@@ -296,6 +298,7 @@ export function Home() {
               {/* Enlarged Image */}
               <img 
                 src={imgSrc} 
+                loading="lazy"
                 alt={imgAlt}
                 className="w-full h-auto"
               />
