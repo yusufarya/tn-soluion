@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Hide scrollbar for webkit browsers (e.g., Chrome, Safari) */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* For mobile momentum scroll */
+.scrollable {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* iOS smooth scroll */
+}
+
+.bg-content {
+    position: relative; /* Important: This makes sure the pseudo-element is positioned relative to this container */
+    background-image: url('/img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This creates the parallax effect */
+    padding: 20px;
+    /* border-radius: 10px; */
+    overflow: hidden; /* Ensures the pseudo-element stays within the border-radius */
+}
+
+.bg-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.80), rgba(91, 139, 193, 0.663)); /* Adjust the gradient as needed */
+    border-radius: inherit; /* Ensures the gradient respects the border-radius of the container */
+}
